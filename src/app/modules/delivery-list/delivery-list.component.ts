@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -25,6 +26,7 @@ import { TDelivery } from '@app/shared';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    CommonModule,
   ],
   templateUrl: './delivery-list.component.html',
   styleUrl: './delivery-list.component.scss',
@@ -66,6 +68,7 @@ export class DeliveryListComponent {
       next: (response) => {
         this.listDelivery = response;
         this.dataSource = new MatTableDataSource<TDelivery>(response);
+        this.dataSource.paginator = this.paginator;
       },
       error: (error) => {
         this.toastr.error('Error!', error.message);
@@ -80,7 +83,10 @@ export class DeliveryListComponent {
 
     if (motoristaNome) {
       filterResult = this.listDelivery.filter((item) =>
-        item.motorista.nome.includes(motoristaNome),
+        item.motorista.nome
+          .toLocaleLowerCase()
+          .trim()
+          .includes(motoristaNome.toLocaleLowerCase().trim()),
       );
     }
 

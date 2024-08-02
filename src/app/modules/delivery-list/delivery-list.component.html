@@ -97,7 +97,16 @@
           <p>Status</p>
         </th>
         <td mat-cell *matCellDef="let element" class="text-center">
-          {{ element.status_entrega }}
+          <span
+            class="chip"
+            [ngClass]="{
+              'chip-green': element.status_entrega === 'ENTREGUE',
+              'chip-yellow': element.status_entrega === 'PENDENTE',
+              'chip-red': element.status_entrega === 'INSUCESSO',
+            }"
+          >
+            {{ element.status_entrega }}
+          </span>
         </td>
       </ng-container>
 

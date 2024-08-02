@@ -20,3 +20,30 @@
   text-align: center;
 }
 
+.chip {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.chip {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.88);
+}
+.chip-green {
+  color: #389e0d;
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+}
+.chip-yellow {
+  color: #d4b106;
+  background-color: #feffe6;
+  border-color: #fffb8f;
+}
+.chip-red {
+  color: #cf1322;
+  background-color: #fff1f0;
+  border-color: #ffa39e;
+}
