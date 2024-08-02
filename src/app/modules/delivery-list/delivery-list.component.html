@@ -15,7 +15,7 @@
                 matInput
                 placeholder="Motorista"
                 [(ngModel)]="filterDriver"
-                (change)="onChangeDriver($event)"
+                (change)="handleFilters()"
               />
             </mat-form-field>
           </div>
@@ -26,7 +26,7 @@
               <mat-select
                 id="filter-status"
                 [(ngModel)]="filterStatus"
-                (selectionChange)="onChangeStatus($event)"
+                (selectionChange)="handleFilters()"
                 [value]="''"
               >
                 <mat-option value="">TODOS</mat-option>
@@ -42,11 +42,21 @@
   </div>
 
   <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      matSort
+      (matSortChange)="announceSortChange($event)"
+    >
       <!-- Id Column -->
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>
-          <p>ID</p>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          sortActionDescription="Sort by id"
+        >
+          ID
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.id }}
@@ -55,7 +65,15 @@
 
       <!-- Documento Column -->
       <ng-container matColumnDef="documento">
-        <th mat-header-cell *matHeaderCellDef class="w-50">Documento</th>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          class="w-50"
+          mat-sort-header
+          sortActionDescription="Sort by document"
+        >
+          Documento
+        </th>
         <td mat-cell *matCellDef="let element">
           {{ element.documento }}
         </td>
@@ -63,8 +81,13 @@
 
       <!-- Motorista Nome Column -->
       <ng-container matColumnDef="motorista">
-        <th mat-header-cell *matHeaderCellDef>
-          <p>Motorista</p>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header="motorista.nome"
+          sortActionDescription="Sort by name"
+        >
+          Motorista
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.motorista.nome }}
@@ -73,8 +96,13 @@
 
       <!-- Cliente_Origim Nome Column -->
       <ng-container matColumnDef="cliente_origem">
-        <th mat-header-cell *matHeaderCellDef>
-          <p>Cliente (Origem)</p>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header="cliente_origem.nome"
+          sortActionDescription="Sort by client_name"
+        >
+          Cliente (Origem)
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.cliente_origem.nome }}
@@ -83,8 +111,13 @@
 
       <!-- Cliente_Destino Nome Column -->
       <ng-container matColumnDef="cliente_destino">
-        <th mat-header-cell *matHeaderCellDef>
-          <p>Cliente (Destino)</p>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header="cliente_destino.nome"
+          sortActionDescription="Sort by destiny"
+        >
+          Cliente (Destino)
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.cliente_destino.nome }}
@@ -93,8 +126,14 @@
 
       <!-- Status Nome Column -->
       <ng-container matColumnDef="status_entrega">
-        <th mat-header-cell *matHeaderCellDef class="text-center">
-          <p>Status</p>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          class="text-center"
+          mat-sort-header
+          sortActionDescription="Sort by status"
+        >
+          Status
         </th>
         <td mat-cell *matCellDef="let element" class="text-center">
           <span

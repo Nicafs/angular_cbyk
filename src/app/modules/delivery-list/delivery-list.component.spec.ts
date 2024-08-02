@@ -49,11 +49,6 @@ describe('DeliveryListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('on change motorista', () => {
-    component.onChangeDriver({ target: { value: 'Carlos' } });
-    fixture.detectChanges();
-  });
-
   it('should use the service', () => {
     const fakedFetchedList = mockData;
 

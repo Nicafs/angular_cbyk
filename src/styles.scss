@@ -3,3 +3,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 // regular style toast
 @import 'ngx-toastr/toastr';
+
+
+.text-center, .text-center .mat-sort-header-container {
+  text-align: center !important;
+  justify-content: center;
+}

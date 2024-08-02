@@ -26,7 +26,7 @@ import { concatMap, groupBy, map, mergeMap, of, reduce } from 'rxjs';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   listDriver: {
     name: string;
     data: TDelivery[];
