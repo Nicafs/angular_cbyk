@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Made by Nicollas Santos.
 
-![Nicollas Photo] https://media.licdn.com/dms/image/C4D03AQF4RDjI4p8uIQ/profile-displayphoto-shrink_800_800/0/1631283376573?e=1727913600&v=beta&t=HM9Of7RWL6ajLvpXz_smwS2FZ7bHf_11smiG7cHmqvo
+![Nicollas Photo](https://media.licdn.com/dms/image/C4D03AQF4RDjI4p8uIQ/profile-displayphoto-shrink_800_800/0/1631283376573?e=1727913600&v=beta&t=HM9Of7RWL6ajLvpXz_smwS2FZ7bHf_11smiG7cHmqvo)
 
 My linkedin profile -> https://www.linkedin.com/in/nicollas-santos-front-end/
 
