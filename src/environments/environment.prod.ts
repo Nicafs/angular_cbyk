@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://localhost:4200',
+  api: 'https://raw.githubusercontent.com/brunochikuji/example/main',
 };

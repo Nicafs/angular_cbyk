@@ -1,0 +1,25 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1 1 100%;
+}
+
+.mat-drawer-container {
+  width: 100%;
+  height: 100%;
+
+  .menu-drawer {
+    width: 20%;
+    max-width: 250px;
+    height: 100%;
+  }
+
+  .mat-drawer-content {
+    padding: 20px;
+  }
+}

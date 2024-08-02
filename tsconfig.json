@@ -26,14 +26,15 @@
     "paths": {
       "@app/*": ["app/*"],
       "@env/*": ["environments/*"],
-      "@share/*": ["app/share/*"],
+      "@shared/*": ["app/shared/*"],
       "@core/*": ["app/core/*"],
+      "@components/*": ["app/core/components/*"],
       "@modules/*": ["app/modules/*"],
       "@assets/*": ["assets/*"],
-      "@models": ["app/share/models/index.ts"],
-      "@models/*": ["app/share/models/"],
-      "@pipe": ["app/share/pipe/index.ts"],
-      "@pipe/*": ["app/share/pipe/"],
+      "@models": ["app/shared/models/index.ts"],
+      "@models/*": ["app/shared/models/"],
+      "@pipe": ["app/shared/pipe/index.ts"],
+      "@pipe/*": ["app/shared/pipe/"],
       "@services": ["app/core/services/index.ts"],
       "@services/*": ["app/core/services/*"]
     }

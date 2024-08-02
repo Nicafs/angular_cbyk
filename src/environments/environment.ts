@@ -4,5 +4,5 @@
 
 export const environment = {
   production: false,
-  api: 'https://localhost:4200',
+  api: 'https://raw.githubusercontent.com/brunochikuji/example/main',
 };

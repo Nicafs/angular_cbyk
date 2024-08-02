@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  max-width: 1520px;
+}
+
+.content-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
